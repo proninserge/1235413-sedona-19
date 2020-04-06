@@ -33,34 +33,34 @@
       <div class="hero">
         <img class="hero__image" src="https://via.placeholder.com/150x150" alt="Sedona">
       </div>
-      <section class="feedback-intro">
-        <h1 class="feedback-intro__header">Оставьте свой отзыв</h1>
-        <p class="feedback-intro__description">
+      <section class="intro">
+        <h1 class="intro__header">Оставьте свой отзыв</h1>
+        <p class="intro__description">
           Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
         </p>
       </section>
       <section class="feedback">
         <h2 class="visually-hidden">Форма отзыва</h2>
-        <form class="feedback-form" method="get" action="https://echo.htmlacademy.ru">
+        <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
           <fieldset class="feedback-form__fieldset">
             <legend class="feedback-form__legend">Представьтесь:</legend>
             <ul class="feedback-form__list">
               <li>
                 <label class="feedback-form__label feedback-form__label--contacts">
                   Имя<sup>*</sup>:
-                  <input class="feedback-form__text-input" type="text" name="first-name" placeholder="Петр" required>
+                  <input class="feedback-form__type-input" type="text" name="first-name" placeholder="Петр" required>
                 </label>
               </li>
               <li>
                 <label class="feedback-form__label feedback-form__label--contacts">
                   Фамилия<sup>*</sup>:
-                  <input class="feedback-form__text-input" type="text" name="last-name" placeholder="Иванов" required>
+                  <input class="feedback-form__type-input" type="text" name="last-name" placeholder="Иванов" required>
                 </label>
               </li>
               <li>
                 <label class="feedback-form__label feedback-form__label--contacts">
                   Отчество:
-                  <input class="feedback-form__text-input" type="text" name="middle-name" placeholder="Александрович">
+                  <input class="feedback-form__type-input" type="text" name="middle-name" placeholder="Александрович">
                 </label>
               </li>
             </ul>
@@ -71,16 +71,16 @@
               <li>
                 <label class="feedback-form__label feedback-form__label--contacts">
                   Контактный телефон<sup>*</sup>:
-                  <input class="feedback-form__text-input" type="text" name="phone" placeholder="Введите телефон" required>
+                  <input class="feedback-form__type-input" type="tel" name="phone" placeholder="Введите телефон" required>
                 </label>
-                <div>Телефон</div>
+                <img class="feedback-form__logo" src="https://via.placeholder.com/150x150" alt="Телефон">
               </li>
               <li>
                 <label class="feedback-form__label feedback-form__label--contacts">
                   Электронная почта<sup>*</sup>:
-                  <input class="feedback-form__text-input" type="text" name="email" placeholder="Введите e-mail" required>
+                  <input class="feedback-form__type-input" type="email" name="email" placeholder="Введите e-mail" required>
                 </label>
-                <div>Почта</div>
+                <img class="feedback-form__logo" src="https://via.placeholder.com/150x150" alt="Почта">
               </li>
             </ul>
           </fieldset>
@@ -145,7 +145,7 @@
           </fieldset>
           <fieldset class="feedback-form__fieldset">
             <legend class="feedback-form__legend">Опишите свои эмоции:</legend>
-            <input class="feedback-form__text-input feedback-form__text-input--long" type="text" name="impressions" placeholder="Опишите подробно все свои восторги">
+            <input class="feedback-form__type-input feedback-form__type-input--long" type="text" name="impressions" placeholder="Опишите подробно все свои восторги">
           </fieldset>
           <button class="feedback-form__btn" type="submit">Отправить отзыв</button>
         </form>
