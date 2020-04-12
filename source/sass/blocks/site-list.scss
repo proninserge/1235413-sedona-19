@@ -1,0 +1,16 @@
+.site-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-list__link {
+  display: block;
+  box-sizing: border-box;
+  padding: 8px 0 8px 0;
+  background-color: #81b3d2;
+  box-shadow: inset rgba(0, 0, 0, 0.3) 0 -1px 1px, inset rgba(255, 255, 255, 0.3) 0 1px 1px;
+}
+
+.site-list__item:last-child .site-list__link {
+  box-shadow: inset rgba(0, 0, 0, 0.3) 0 -2px 3px, inset rgba(255, 255, 255, 0.3) 0 1px 1px;
+}

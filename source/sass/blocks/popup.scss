@@ -1,0 +1,35 @@
+.popup {
+  box-sizing: border-box;
+  padding: 35px 0;
+  line-height: 24px;
+
+  &__header {
+    margin: 0;
+  }
+
+  &__description {
+    margin: 40px 45px 31px;
+  }
+
+  &__btn {
+    @include font-for-headers;
+    font-family: inherit;
+    text-transform: inherit;
+    color: #ffffff;
+    border: 0;
+    background-color: #81b3d2;
+    padding: 16px;
+    box-sizing: border-box;
+    min-width: 180px;
+  }
+
+  &--success {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__btn--success {
+    width: 100%;
+    border: 20px solid #f2f2f2;
+  }
+}

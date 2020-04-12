@@ -1,0 +1,17 @@
+@mixin font-in-nav {
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+@mixin font-for-headers {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+@mixin catch-font {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
