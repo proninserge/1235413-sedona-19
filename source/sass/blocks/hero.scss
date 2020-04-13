@@ -1,7 +1,7 @@
 .hero {
   line-height: 0;
   box-sizing: border-box;
-  background-color: #334955;
+  background-color: $bg-pic-color;
   background-image: url("../img/bg-back-mobile@1x.jpg");
 
   &--index {

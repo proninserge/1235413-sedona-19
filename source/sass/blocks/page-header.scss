@@ -23,21 +23,57 @@
     transform: translate(-50%, -50%);
     width: 25px;
     height: 4px;
-    background-color: #81b3d2;
+    background-color: $bg-btn-color;
   }
 
   &::before {
-    box-shadow: 0 -9px 0 0 #81b3d2;
+    box-shadow: 0 -9px 0 0 $bg-btn-color;
   }
 
   &::after {
-    box-shadow: 0 9px 0 0 #81b3d2;
+    box-shadow: 0 9px 0 0 $bg-btn-color;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: rgba(129, 179, 210, 0.3);
+  }
+
+  &:hover::before {
+    box-shadow: 0 -9px 0 0 $box-sh-hover;
+  }
+
+  &:hover::after {
+    box-shadow: 0 9px 0 0 $box-sh-hover;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgba(129, 179, 210, 0.15);
+  }
+
+  &:active::before {
+    box-shadow: 0 -9px 0 0 $box-sh-active;
+  }
+
+  &:active::after {
+    box-shadow: 0 9px 0 0 $box-sh-active;
   }
 
   &--close::before,
   &--close::after {
-    background-color: #ffffff;
+    background-color: $bg-main-color;
     box-shadow: none;
+  }
+
+  &--close:hover::before,
+  &--close:hover::after {
+    background-color: $hover-btn-color;
+  }
+
+  &--close:active::before,
+  &--close:active::after {
+    background-color: $active-btn-color;
   }
 
   &--close::before {
@@ -49,15 +85,14 @@
   }
 }
 
-.page-header__logo {
+.page-header__logo-section {
   position: relative;
-  display: block;
   width: 100%;
   box-sizing: border-box;
   padding-bottom: 55px;
 }
 
-.page-header__logo-image {
+.page-header__logo {
   position: absolute;
   top: 0;
   left: 50%;

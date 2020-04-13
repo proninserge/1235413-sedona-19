@@ -1,37 +1,35 @@
-.content {
-  &__header,
-  &__author,
-  &__like-number {
-    margin: 0;
-    font-weight: 700;
-  }
+.content__header,
+.content__author,
+.content__like-number {
+  margin: 0;
+  font-weight: 700;
+}
 
-  &__header {
-    margin-top: 7px;
-  }
+.content__header {
+  margin-top: 7px;
+}
 
-  &__author {
-    margin-top: 1px;
-    margin-bottom: 2px;
-    font-weight: 400;
-    text-transform: none;
-  }
+.content__author {
+  margin-top: 1px;
+  margin-bottom: 2px;
+  font-weight: 400;
+  text-transform: none;
+}
 
-  &__likes {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-  }
+.content__likes {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
 
-  &__like-btn {
-    height: 22px;
-    width: 22px;
-    padding: 0;
-    border: 0;
-    background-color: transparent;
-    background-image: url("../img/icon-like.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 15px;
-  }
+.content__like-btn {
+  height: 22px;
+  width: 22px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  background-image: url("../img/icon-like.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 15px;
 }

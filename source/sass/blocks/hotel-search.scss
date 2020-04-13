@@ -1,26 +1,39 @@
 .hotel-search {
   padding: 27px 20px 49px;
+}
 
-  &__interested {
-    @include catch-font;
-    margin: 0;
+.hotel-search__interested {
+  @include catch-font;
+  margin: 0;
+}
+
+.hotel-search__description {
+  line-height: 24px;
+  margin-top: 22px;
+  margin-bottom: 33px;
+}
+
+.hotel-search__btn {
+  @include catch-font;
+  font-family: inherit;
+  text-transform: inherit;
+  color: $bg-main-color;
+  border: 0;
+  background-color: $bg-btn-color;
+  padding: 16px;
+  box-sizing: border-box;
+  width: 100%;
+
+  &:hover {
+    background-color: $bg-hover-btn-color;
   }
 
-  &__description {
-    line-height: 24px;
-    margin-top: 22px;
-    margin-bottom: 33px;
+  &:active {
+    color: $active-btn-color;
+    background-color: $bg-active-btn-color;
   }
 
-  &__btn {
-    @include catch-font;
-    font-family: inherit;
-    text-transform: inherit;
-    color: #ffffff;
-    border: 0;
-    background-color: #81b3d2;
-    padding: 16px;
-    box-sizing: border-box;
-    width: 100%;
+  &:disabled {
+    background-color: $border-color;
   }
 }

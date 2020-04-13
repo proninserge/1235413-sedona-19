@@ -7,8 +7,17 @@
   display: block;
   box-sizing: border-box;
   padding: 8px 0 8px 0;
-  background-color: #81b3d2;
+  background-color: $bg-btn-color;
   box-shadow: inset rgba(0, 0, 0, 0.3) 0 -1px 1px, inset rgba(255, 255, 255, 0.3) 0 1px 1px;
+
+  &:hover {
+    background-color: $bg-hover-btn-color;
+  }
+
+  &:active {
+    color: $active-btn-color;
+    background-color: $bg-active-btn-color;
+  }
 }
 
 .site-list__item:last-child .site-list__link {

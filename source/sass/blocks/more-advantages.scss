@@ -3,26 +3,26 @@
   padding: 0;
   margin: 0;
   text-align: start;
-  background-color: #ffffff;
+  background-color: $bg-main-color;
+}
 
-  &__item {
-    padding-top: 30px;
-    padding-left: 71px;
-    padding-right: 25px;
-    background-image: url("../img/icon-gift.svg");
-    background-repeat: no-repeat;
-    background-position: 24px 20px;
-    background-size: 32px;
-  }
+.more-advantages__item {
+  padding-top: 30px;
+  padding-left: 71px;
+  padding-right: 25px;
+  background-image: url("../img/icon-gift.svg");
+  background-repeat: no-repeat;
+  background-position: 24px 20px;
+  background-size: 32px;
 
-  &__item--lodgement {
+  &--lodgement {
     padding-top: 35px;
     background-image: url("../img/icon-house.svg");
     background-position: 22px 26px;
     background-size: 37px;
   }
 
-  &__item--cuisine {
+  &--cuisine {
     padding-bottom: 37px;
     background-image: url("../img/icon-burger.svg");
     background-position: 20px 24px;

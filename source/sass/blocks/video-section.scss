@@ -1,23 +1,23 @@
 .video-section {
   box-sizing: border-box;
   padding: 30px 0 37px;
+}
 
-  &__header,
-  &__description {
-    margin: 0;
-    line-height: 24px;
-  }
+.video-section__header,
+.video-section__description {
+  margin: 0;
+  line-height: 24px;
+}
 
-  &__header {
-    @include font-for-headers;
-    margin-bottom: 28px;
-  }
+.video-section__header {
+  @include font-for-headers;
+  margin-bottom: 28px;
+}
 
-  &__description {
-    margin: 0 42px 35px;
-  }
+.video-section__description {
+  margin: 0 42px 35px;
+}
 
-  &__video {
-    line-height: 0;
-  }
+.video-section__video {
+  line-height: 0;
 }

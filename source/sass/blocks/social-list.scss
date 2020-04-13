@@ -11,14 +11,14 @@
   width: 46px;
   height: 48px;
 
-  background-color: #81b3d2;
+  background-color: $bg-btn-color;
 
   &:hover {
-    background-color: #669ec0;
+    background-color: $bg-hover-btn-color;
   }
 
   &:active {
-    background-color: #5496bd;
+    background-color: $bg-active-btn-color;
   }
 
   &::before {
@@ -32,7 +32,6 @@
     z-index: 1;
     background-position: center;
     background-repeat: no-repeat;
-    filter: invert(100%);
   }
 
   &--twitter::before {

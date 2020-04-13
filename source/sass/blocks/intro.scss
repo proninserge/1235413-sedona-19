@@ -2,28 +2,28 @@
   box-sizing: border-box;
   padding: 41px 30px 27px;
 
-  &__header {
-    @include font-for-headers;
-    margin: 0;
-    margin-bottom: 28px;
-  }
-
-  &__description {
-    line-height: 26px;
-    margin: 0;
-  }
-
   &--interior {
     padding: 36px 24px 26px;
-    border-bottom: 2px solid #e5e5e5;
+    border-bottom: 2px solid $border-color;
   }
 
   &--form {
     padding: 36px 20px 16px;
     border: none;
   }
+}
 
-  &__description--interior {
+.intro__header {
+  @include font-for-headers;
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.intro__description {
+  line-height: 26px;
+  margin: 0;
+
+  &--interior {
     line-height: 24px;
   }
 }
