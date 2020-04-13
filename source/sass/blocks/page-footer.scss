@@ -1,0 +1,21 @@
+.page-footer {
+  box-sizing: border-box;
+  border-top: 1px solid transparent;
+  background-color: $bg-main-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 34px 85px;
+}
+
+.page-footer__hashtag {
+  margin: 0;
+
+  @include catch-font;
+}
+
+.page-footer__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

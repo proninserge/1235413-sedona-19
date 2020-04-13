@@ -1,0 +1,100 @@
+.page-header {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.page-header__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border: 0;
+  z-index: 10;
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 4px;
+    background-color: $bg-btn-color;
+  }
+
+  &::before {
+    box-shadow: 0 -9px 0 0 $bg-btn-color;
+  }
+
+  &::after {
+    box-shadow: 0 9px 0 0 $bg-btn-color;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: rgba(129, 179, 210, 0.3);
+  }
+
+  &:hover::before {
+    box-shadow: 0 -9px 0 0 $box-sh-hover;
+  }
+
+  &:hover::after {
+    box-shadow: 0 9px 0 0 $box-sh-hover;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgba(129, 179, 210, 0.15);
+  }
+
+  &:active::before {
+    box-shadow: 0 -9px 0 0 $box-sh-active;
+  }
+
+  &:active::after {
+    box-shadow: 0 9px 0 0 $box-sh-active;
+  }
+
+  &--close::before,
+  &--close::after {
+    background-color: $bg-main-color;
+    box-shadow: none;
+  }
+
+  &--close:hover::before,
+  &--close:hover::after {
+    background-color: $hover-btn-color;
+  }
+
+  &--close:active::before,
+  &--close:active::after {
+    background-color: $active-btn-color;
+  }
+
+  &--close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &--close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.page-header__logo-section {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 55px;
+}
+
+.page-header__logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}

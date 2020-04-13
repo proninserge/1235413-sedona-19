@@ -1,0 +1,19 @@
+.hero {
+  line-height: 0;
+  box-sizing: border-box;
+  background-color: $bg-pic-color;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+
+  &--index {
+    background-size: cover;
+    background-position: center;
+    padding: 87px 20px;
+  }
+
+  &--interior {
+    background-repeat: no-repeat;
+    background-size: 780px;
+    background-position: -230px -235px;
+    padding: 53px 46px 68px;
+  }
+}

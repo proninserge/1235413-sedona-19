@@ -1,0 +1,52 @@
+.advantages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.advantages-list__item {
+  background-color: $bg-adv-color;
+  padding: 28px 37px 29px;
+
+  &:first-child,
+  &:nth-child(2) {
+    padding: 0;
+  }
+}
+
+.advantages-list__header,
+.advantages-list__number,
+.advantages-list__description {
+  margin: 0;
+}
+
+.advantages-list__header {
+  margin-bottom: 8px;
+
+  @include font-for-headers;
+}
+
+.advantages-list__number {
+  margin-bottom: 15px;
+}
+
+.advantages-list__description {
+  margin-top: 14px;
+}
+
+.advantages-list__detailed {
+  background-color: $bg-btn-color;
+  color: $bg-main-color;
+  padding: 57px 20px 300px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  &--city {
+    background-image: url("../img/main-city-mobile@1x.jpg");
+  }
+
+  &--devil {
+    padding-top: 39px;
+    background-image: url("../img/main-bridge-mobile@1x.jpg");
+  }
+}
