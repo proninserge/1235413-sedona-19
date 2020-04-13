@@ -7,6 +7,11 @@
 .advantages-list__item {
   background-color: $bg-adv-color;
   padding: 28px 37px 29px;
+
+  &:first-child,
+  &:nth-child(2) {
+    padding: 0;
+  }
 }
 
 .advantages-list__header,
@@ -27,13 +32,6 @@
 
 .advantages-list__description {
   margin-top: 14px;
-}
-
-.advantages-list__item {
-  &:first-child,
-  &:nth-child(2) {
-    padding: 0;
-  }
 }
 
 .advantages-list__detailed {
