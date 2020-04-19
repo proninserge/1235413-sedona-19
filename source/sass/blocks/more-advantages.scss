@@ -1,9 +1,7 @@
 .more-advantages {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  @include list-reset;
   text-align: start;
-  background-color: $bg-main-color;
+  background-color: $bg-white;
 }
 
 .more-advantages__item {
@@ -27,5 +25,47 @@
     background-image: url("../img/icon-burger.svg");
     background-position: 20px 24px;
     background-size: 38px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .more-advantages {
+    display: flex;
+  }
+
+  .more-advantages__item {
+    text-align: center;
+    vertical-align: middle;
+    padding: 159px 45px 61px;
+    width: 33%;
+    background-position: center 62px;
+    background-size: 72px;
+
+    &--cuisine {
+      order: 2;
+      background-size: 75px;
+    }
+
+    &--souvenirs {
+      order: 3;
+      background-position: center 55px;
+      background-size: 65px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .more-advantages__item {
+    padding: 158px 50px 82px;
+    background-position: center 60px;
+
+    &--souvenirs {
+      background-position: center 57px;
+    }
+  }
+
+  .more-advantages__item--souvenirs > .advantages-list__description {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }

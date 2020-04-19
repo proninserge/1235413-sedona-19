@@ -1,11 +1,23 @@
 .popup {
+  display: none;
+  position: absolute;
+  bottom: 400px;
+  box-shadow: 0px 5px 12px 0 rgba(0, 1, 1, 0.2);
+  background-color: $bg-white;
   box-sizing: border-box;
-  padding: 35px 0;
+  padding: 45px 0 35px;
   line-height: 24px;
 
+  &--failed {
+    display: none;
+  }
+
   &--success {
+    display: none;
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 0;
+    bottom: 200px;
   }
 }
 
@@ -21,24 +33,60 @@
   @include font-for-headers;
   font-family: inherit;
   text-transform: inherit;
-  color: $bg-main-color;
+  color: $bg-white;
   border: 0;
-  background-color: $bg-btn-color;
+  background-color: $bg-seagull;
   padding: 16px;
   box-sizing: border-box;
   min-width: 180px;
 
   &--success {
     width: 100%;
-    border: 20px solid $bg-body-color;
+    border: 20px solid $bg-lightgrey;
   }
 
   &:hover {
-    background-color: $bg-hover-btn-color;
+    background-color: $bg-hover-cerulean-frost;
   }
 
   &:active {
-    color: $active-btn-color;
-    background-color: $bg-active-btn-color;
+    color: $active-btn-white;
+    background-color: $bg-active-shakespeare;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .popup {
+    width: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 60px 60px 35px;
+
+    &--success {
+      width: 648px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+      bottom: 200px;
+    }
+  }
+
+  .popup__header {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .popup__description {
+    margin: 40px 0 31px;
+  }
+
+  .popup__btn {
+    width: 100%;
+
+    &--success {
+      border: 45px solid $bg-lightgrey;
+      border-left: 85px solid $bg-lightgrey;
+      border-right: 85px solid $bg-lightgrey;
+    }
   }
 }

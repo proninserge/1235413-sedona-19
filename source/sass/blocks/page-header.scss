@@ -23,15 +23,15 @@
     transform: translate(-50%, -50%);
     width: 25px;
     height: 4px;
-    background-color: $bg-btn-color;
+    background-color: $bg-seagull;
   }
 
   &::before {
-    box-shadow: 0 -9px 0 0 $bg-btn-color;
+    box-shadow: 0 -9px 0 0 $bg-seagull;
   }
 
   &::after {
-    box-shadow: 0 9px 0 0 $bg-btn-color;
+    box-shadow: 0 9px 0 0 $bg-seagull;
   }
 
   &:hover::before,
@@ -40,11 +40,11 @@
   }
 
   &:hover::before {
-    box-shadow: 0 -9px 0 0 $box-sh-hover;
+    box-shadow: 0 -9px 0 0 $hover-greyblue;
   }
 
   &:hover::after {
-    box-shadow: 0 9px 0 0 $box-sh-hover;
+    box-shadow: 0 9px 0 0 $hover-greyblue;
   }
 
   &:active::before,
@@ -53,27 +53,27 @@
   }
 
   &:active::before {
-    box-shadow: 0 -9px 0 0 $box-sh-active;
+    box-shadow: 0 -9px 0 0 $active-greyblue;
   }
 
   &:active::after {
-    box-shadow: 0 9px 0 0 $box-sh-active;
+    box-shadow: 0 9px 0 0 $active-greyblue;
   }
 
   &--close::before,
   &--close::after {
-    background-color: $bg-main-color;
+    background-color: $bg-white;
     box-shadow: none;
   }
 
   &--close:hover::before,
   &--close:hover::after {
-    background-color: $hover-btn-color;
+    background-color: $hover-btn-white;
   }
 
   &--close:active::before,
   &--close:active::after {
-    background-color: $active-btn-color;
+    background-color: $active-btn-white;
   }
 
   &--close::before {
@@ -97,4 +97,22 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    padding: 15px 0;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+
+  .page-header__logo-section {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+  }
 }

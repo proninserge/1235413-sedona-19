@@ -8,7 +8,7 @@ body {
   font-weight: 400;
   color: #000000;
   text-transform: uppercase;
-  background-color: $bg-body-color;
+  background-color: $bg-lightgrey;
 }
 
 a {
@@ -17,11 +17,11 @@ a {
 }
 
 .page-wrapper {
-  width: 320px;
+  min-width: 320px;
   text-align: center;
   vertical-align: middle;
   position: relative;
-  background-color: $bg-main-color;
+  background-color: $bg-white;
   margin: 0 auto;
 }
 
@@ -36,4 +36,11 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   white-space: nowrap;
+}
+
+@media (min-width: $desktop-width) {
+  .page-wrapper {
+    width: 1200px;
+    box-shadow: 0px 5px 12px 0 rgba(0, 1, 1, 0.2);
+  }
 }

@@ -1,7 +1,8 @@
-@import "variables/color-list.scss";
+@import "variables/variables.scss";
 @import "common/common.scss";
 @import "common/fonts.scss";
 @import "mixins/font-descriptions.scss";
+@import "mixins/list-reset.scss";
 @import "blocks/page-header.scss";
 @import "blocks/page-nav.scss";
 @import "blocks/site-list.scss";
@@ -18,5 +19,6 @@
 @import "blocks/content.scss";
 @import "blocks/video-section.scss";
 @import "blocks/video-presentation.scss";
+@import "blocks/feedback.scss";
 @import "blocks/feedback-form.scss";
 @import "blocks/popup.scss";

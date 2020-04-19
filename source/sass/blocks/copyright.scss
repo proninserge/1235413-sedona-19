@@ -13,3 +13,14 @@
 .copyright__developed-by {
   display: block;
 }
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    padding: 0;
+    justify-content: flex-end;
+  }
+
+  .copyright__developed-by {
+    margin-left: 13px;
+  }
+}

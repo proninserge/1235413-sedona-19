@@ -11,14 +11,14 @@
   width: 46px;
   height: 48px;
 
-  background-color: $bg-btn-color;
+  background-color: $bg-seagull;
 
   &:hover {
-    background-color: $bg-hover-btn-color;
+    background-color: $bg-hover-cerulean-frost;
   }
 
   &:active {
-    background-color: $bg-active-btn-color;
+    background-color: $bg-active-shakespeare;
   }
 
   &::before {
@@ -50,5 +50,13 @@
   &--facebook:active::before,
   &--youtube:active::before {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social-list {
+    margin: 0;
+    width: 151px;
+    margin-left: -6px;
   }
 }
