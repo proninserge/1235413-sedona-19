@@ -17,23 +17,49 @@
   @include catch-font;
   font-family: inherit;
   text-transform: inherit;
-  color: $bg-main-color;
+  color: $bg-white;
   border: 0;
-  background-color: $bg-btn-color;
+  background-color: $bg-seagull;
   padding: 16px;
   box-sizing: border-box;
   width: 100%;
 
   &:hover {
-    background-color: $bg-hover-btn-color;
+    background-color: $bg-hover-cerulean-frost;
   }
 
   &:active {
-    color: $active-btn-color;
-    background-color: $bg-active-btn-color;
+    color: $active-btn-white;
+    background-color: $bg-active-shakespeare;
   }
 
   &:disabled {
-    background-color: $border-color;
+    background-color: $border-whisper;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .hotel-search {
+    padding: 55px 155px 59px;
+  }
+
+  .hotel-search__interested {
+    font-size: 30px;
+  }
+
+  .hotel-search__description {
+    margin-top: 30px;
+    margin-bottom: 43px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .hotel-search {
+    padding: 55px 371px 65px;
+  }
+
+  .hotel-search__description {
+    margin-top: 31px;
+    margin-bottom: 47px;
   }
 }

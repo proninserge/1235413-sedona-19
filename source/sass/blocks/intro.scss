@@ -4,7 +4,7 @@
 
   &--interior {
     padding: 36px 24px 26px;
-    border-bottom: 2px solid $border-color;
+    border-bottom: 2px solid $border-whisper;
   }
 
   &--form {
@@ -25,5 +25,43 @@
 
   &--interior {
     line-height: 24px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .intro {
+    padding: 50px 140px;
+
+    &--interior {
+      padding: 75px 168px 70px;
+      border: none;
+    }
+
+    &--interior > .intro__header {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    &--form {
+      padding-left: 160px;
+      padding-right: 160px;
+    }
+  }
+
+  .intro__header {
+    @include catch-font;
+    margin-bottom: 29px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .intro {
+    padding-left: 356px;
+    padding-right: 356px;
+
+    &--interior {
+      padding-top: 114px;
+      padding-bottom: 55px;
+    }
   }
 }

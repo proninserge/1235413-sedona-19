@@ -7,19 +7,55 @@
   display: block;
   box-sizing: border-box;
   padding: 8px 0 8px 0;
-  background-color: $bg-btn-color;
+  background-color: $bg-seagull;
   box-shadow: inset rgba(0, 0, 0, 0.3) 0 -1px 1px, inset rgba(255, 255, 255, 0.3) 0 1px 1px;
 
   &:hover {
-    background-color: $bg-hover-btn-color;
+    background-color: $bg-hover-cerulean-frost;
   }
 
   &:active {
-    color: $active-btn-color;
-    background-color: $bg-active-btn-color;
+    color: $active-btn-white;
+    background-color: $bg-active-shakespeare;
   }
 }
 
 .site-list__item:last-child .site-list__link {
   box-shadow: inset rgba(0, 0, 0, 0.3) 0 -2px 3px, inset rgba(255, 255, 255, 0.3) 0 1px 1px;
+}
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .site-list__link {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+
+    &:hover {
+      background-color: transparent;
+      color: $bg-seagull;
+    }
+
+    &:active {
+      background-color: transparent;
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .site-list__item:last-child .site-list__link {
+    box-shadow: none;
+  }
+
+  .site-list__item {
+    flex-basis: 20%;
+  }
+
+  .site-list__item:nth-child(3) {
+    margin-left: auto;
+  }
 }

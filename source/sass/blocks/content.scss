@@ -33,3 +33,54 @@
   background-position: center;
   margin-right: 15px;
 }
+
+@media (min-width: $tablet-width) {
+  .content:first-of-type {
+    text-align: center;
+    width: 100%;
+  }
+
+  .content__wrapper {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $bg-lightgrey;
+    padding: 7px 30px 15px 20px;
+
+    &--main-photo {
+      padding-right: 20px;
+    }
+
+    &--photo {
+      padding-right: 37px;
+    }
+  }
+
+  .content__header,
+  .content__author {
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .content__like-btn {
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .content {
+    position: relative;
+    color: $bg-white;
+  }
+
+  .content__wrapper {
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    bottom: 0;
+    right: 0;
+  }
+}

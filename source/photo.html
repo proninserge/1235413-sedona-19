@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
     <title>Седона, забронировать отель, отдых, незабываемые ощущения</title>
   </head>
@@ -34,59 +35,94 @@
 
     <main class="page-main">
       <div class="hero hero--interior">
-        <img class="hero__image hero-image--interior" src="https://via.placeholder.com/228x38" alt="Sedona">
+        <picture class="hero__image">
+          <source media="(min-width: 768px)" srcset="https://via.placeholder.com/458x75">
+          <img src="https://via.placeholder.com/228x38" alt="Sedona">
+        </picture>
       </div>
       <section class="intro intro--interior">
         <h1 class="intro__header">Фото и видео</h1>
         <p class="intro__description intro__description--interior">
-          Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
+          Не можете решиться на путешествие из-за курса? Фотографии&nbsp;помогут вам забыть о политике и экономике.
         </p>
       </section>
       <section class="pictures">
         <h2 class="visually-hidden">Фотографии Седоны и окрестностей</h2>
         <ul class="pictures-list">
           <li class="pictures-list__item content">
-            <a hreaf="#">
-              <img src="https://via.placeholder.com/280x280" alt="Неродные просторы">
+            <a class="content__image" hreaf="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/1200x400">
+                <source media="(min-width: 768px)" srcset="https://via.placeholder.com/648x400">
+                <img src="https://via.placeholder.com/280x280" alt="Неродные просторы">
+              </picture>
             </a>
-            <p class="content__header">Неродные просторы</p>
-            <p class="content__author">Автор фото: Борис</p>
-            <div class="content__likes">
-              <button class="content__like-btn" aria-label="Понравилось"></button>
-              <p class="content__like-number">1350</p>
+            <div class="content__wrapper content__wrapper--main-photo">
+              <div class="content__info">
+                <p class="content__header">Неродные просторы</p>
+                <p class="content__author">Автор фото: Борис</p>
+              </div>
+              <div class="content__likes">
+                <button class="content__like-btn" aria-label="Понравилось"></button>
+                <p class="content__like-number">1350</p>
+              </div>
             </div>
           </li>
           <li class="pictures-list__item content">
             <a hreaf="#">
-              <img src="https://via.placeholder.com/280x280" alt="Местная растительность">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/400x267">
+                <source media="(min-width: 768px)" srcset="https://via.placeholder.com/324x267">
+                <img src="https://via.placeholder.com/280x280" alt="Местная растительность">
+              </picture>
             </a>
-            <p class="content__header">Местная растительность</p>
-            <p class="content__author">Автор фото: Сергей</p>
-            <div class="content__likes">
-              <button class="content__like-btn" aria-label="Понравилось"></button>
-              <p class="content__like-number">143</p>
+            <div class="content__wrapper">
+              <div class="content__info">
+                <p class="content__header">Местная растительность</p>
+                <p class="content__author">Автор фото: Сергей</p>
+              </div>
+              <div class="content__likes">
+                <button class="content__like-btn" aria-label="Понравилось"></button>
+                <p class="content__like-number">143</p>
+              </div>
             </div>
           </li>
           <li class="pictures-list__item content">
             <a hreaf="#">
-              <img src="https://via.placeholder.com/280x280" alt="Дорога на север">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/400x267">
+                <source media="(min-width: 768px)" srcset="https://via.placeholder.com/324x267">
+                <img src="https://via.placeholder.com/280x280" alt="Дорога на север">
+              </picture>
             </a>
-            <p class="content__header">Дорога на север</p>
-            <p class="content__author">Автор фото: Петр</p>
-            <div class="content__likes">
-              <button class="content__like-btn" aria-label="Понравилось"></button>
-              <p class="content__like-number">96</p>
+            <div class="content__wrapper content__wrapper--photo">
+              <div class="content__info">
+                <p class="content__header">Дорога на север</p>
+                <p class="content__author">Автор фото: Петр</p>
+              </div>
+              <div class="content__likes">
+                <button class="content__like-btn" aria-label="Понравилось"></button>
+                <p class="content__like-number">96</p>
+              </div>
             </div>
           </li>
           <li class="pictures-list__item content">
             <a hreaf="#">
-              <img src="https://via.placeholder.com/280x280" alt="Мост дьявола">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/400x267">
+                <source media="(min-width: 768px)" srcset="https://via.placeholder.com/324x267">
+                <img src="https://via.placeholder.com/280x280" alt="Мост дьявола">
+              </picture>
             </a>
-            <p class="content__header">Мост дьявола</p>
-            <p class="content__author">Автор фото: Антон</p>
-            <div class="content__likes">
-              <button class="content__like-btn" aria-label="Понравилось"></button>
-              <p class="content__like-number">254</p>
+            <div class="content__wrapper">
+              <div class="content__info">
+                <p class="content__header">Мост дьявола</p>
+                <p class="content__author">Автор фото: Антон</p>
+              </div>
+              <div class="content__likes">
+                <button class="content__like-btn" aria-label="Понравилось"></button>
+                <p class="content__like-number">254</p>
+              </div>
             </div>
           </li>
         </ul>
@@ -95,10 +131,14 @@
         <h2 class="visually-hidden">Видеопрезентация Седоны</h2>
         <p class="video-section__header">Все еще сомневаетесь?</p>
         <p class="video-section__description">
-          Смотрите видеопрезентацию и скорее за билетами пока они не подорожали в очередной раз!
+          Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
         </p>
         <div class="video-section__video video-presentation">
-          <img src="https://via.placeholder.com/320x201" alt="Обложка видео">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/800x500">
+            <source media="(min-width: 768px)" srcset="https://via.placeholder.com/648x499">
+            <img src="https://via.placeholder.com/320x201" alt="Обложка видео">
+          </picture>
           <div class="video-presentation__controls">
             <div class="video-presentation__video-seek"></div>
             <div class="video-presentation__btns">

@@ -1,6 +1,6 @@
 .feedback-form {
   @include font-for-headers;
-  border-top: 1px solid $border-color;
+  border-top: 1px solid $border-whisper;
 }
 
 .feedback-form__fieldset {
@@ -8,15 +8,24 @@
   box-sizing: border-box;
   border: 0;
   margin: 0;
-  padding: 0 20px 7px;
-  border-bottom: 1px solid $border-color;
+  padding: 0 22px 3px 19px;
+  border-bottom: 1px solid $border-whisper;
 
   &:last-of-type {
     border: none;
   }
+
+  &--contacts {
+    padding-bottom: 21px;
+  }
+}
+
+.feedback-form__hint {
+  display: none;
 }
 
 .feedback-form__legend {
+  box-sizing: border-box;
   position: absolute;
   top: 0;
   left: 50%;
@@ -24,16 +33,18 @@
   width: 100%;
   text-align: center;
   padding: 0;
-  padding-top: 17px;
   margin: 0;
+  margin-top: 18px;
 }
 
 .feedback-form__list {
-  list-style: none;
-  padding: 0;
-  padding-top: 64px;
-  margin: 0;
+  @include list-reset;
+  margin-top: 65px;
   text-align: left;
+
+  &--contacts {
+    margin-top: 60px;
+  }
 }
 
 .feedback-form__item {
@@ -41,7 +52,11 @@
   justify-content: start;
   align-items: center;
   flex-wrap: wrap;
-  padding-bottom: 18px;
+  margin-bottom: 21px;
+}
+
+.feedback-form__list--contacts > .feedback-form__item {
+  margin-bottom: 6px;
 }
 
 .feedback-form__label {
@@ -55,13 +70,15 @@
   }
 
   &--connection {
+    margin: 0;
+    margin-bottom: 8px;
     margin-left: 21px;
   }
 }
 
 .feedback-form__type-input {
   flex-grow: 1;
-  background-color: $bg-body-color;
+  background-color: $bg-lightgrey;
   box-sizing: border-box;
   font-family: inherit;
 
@@ -71,17 +88,17 @@
   width: 150px;
 
   &--long {
-    margin-top: 60px;
+    margin-top: 61px;
     width: 100%;
   }
 
   &:hover {
-    background-color: $border-color;
+    background-color: $border-whisper;
   }
 
   &:focus {
     background-color: transparent;
-    border: 4px solid $border-color;
+    border: 4px solid $border-whisper;
     padding: 12px 18px;
   }
 }
@@ -90,20 +107,218 @@
   @include catch-font;
   font-family: inherit;
   text-transform: inherit;
-  color: $bg-main-color;
+  color: $bg-white;
   border: 0;
-  background-color: $bg-btn-color;
+  background-color: $bg-seagull;
   padding: 16px;
   box-sizing: border-box;
   min-width: 280px;
-  margin-top: 36px;
+  margin-top: 41px;
 
   &:hover {
-    background-color: $bg-hover-btn-color;
+    background-color: $bg-hover-cerulean-frost;
   }
 
   &:active {
-    color: $active-btn-color;
-    background-color: $bg-active-btn-color;
+    color: $active-btn-white;
+    background-color: $bg-active-shakespeare;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .feedback-form {
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    padding-top: 3px;
+  }
+
+  .feedback-form__fieldset {
+    padding: 0;
+    border: none;
+
+    &--feelings {
+      position: relative;
+      order: 1;
+      width: 50%;
+
+      &::after {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 1px;
+        background-color: #dbdbdb;
+        right: 0;
+        top: 0;
+      }
+    }
+
+    &--name {
+      order: 2;
+      margin-left: 57px;
+      flex-grow: 1;
+    }
+
+    &--contacts {
+      order: 3;
+      width: 100%;
+    }
+
+    &--visited {
+      order: 4;
+      width: 100%;
+    }
+
+    &--emotions {
+      order: 5;
+      width: 100%;
+    }
+  }
+
+  .feedback-form__btn {
+    order: 6;
+    width: 50%;
+    margin-top: 51px;
+  }
+
+  .feedback-form__legend {
+    margin-top: 48px;
+    font-size: 21px;
+    padding: 0;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 50%;
+      transform: translateY(-50%);
+      width: 125px;
+      height: 1px;
+      background-color: #dbdbdb;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+
+    &--name,
+    &--feelings {
+      margin: 0;
+      left: 0;
+      transform: none;
+      width: auto;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    &--visited {
+      margin-top: 33px;
+      padding: 0 190px;
+    }
+  }
+
+  .feedback-form__list {
+    margin-top: 84px;
+
+    &--contacts {
+      margin-top: 94px;
+    }
+
+    &--visited {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 155px;
+      margin-top: 94px;
+    }
+  }
+
+  .feedback-form__label--connection {
+    width: 100%;
+  }
+
+  .feedback-form__list--contacts > .feedback-form__item {
+    margin-bottom: 18px;
+  }
+
+  .feedback-form__type-input--long {
+    margin-top: 133px;
+  }
+
+  .feedback-form__hint {
+    display: block;
+    order: 7;
+    margin: 0;
+    width: 50%;
+    text-align: right;
+    margin-left: auto;
+    padding: 18px 0 16px;
+    box-sizing: border-box;
+    min-width: 280px;
+    margin-top: 51px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback-form__legend--feelings {
+    padding-left: 80px;
+  }
+
+  .feedback-form__fieldset {
+    &--name {
+      margin-left: 80px;
+    }
+  }
+
+  .feedback-form__legend--contacts {
+    margin-top: 45px;
+  }
+
+  .feedback-form__list {
+    &--contacts {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 145px;
+    }
+  }
+
+  .feedback-form__list--contacts .feedback-form__item {
+    min-width: 400px;
+
+    &:last-child {
+      min-width: 480px;
+    }
+  }
+
+  .feedback-form__label {
+    &--connection {
+      margin: 0;
+      margin-right: 17px;
+      width: auto;
+    }
+  }
+
+  .feedback-form__auxiliary {
+    display: none;
+  }
+
+  .feedback-form__legend {
+    &--visited {
+      margin-top: 34px;
+      padding: 0 290px;
+    }
+
+    &::before,
+    &::after {
+      width: 280px;
+    }
   }
 }

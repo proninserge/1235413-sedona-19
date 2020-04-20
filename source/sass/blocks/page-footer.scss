@@ -1,7 +1,7 @@
 .page-footer {
   box-sizing: border-box;
   border-top: 1px solid transparent;
-  background-color: $bg-main-color;
+  background-color: $bg-white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15,7 +15,19 @@
 }
 
 .page-footer__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include list-reset;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    flex-direction: row;
+    align-items: center;
+    padding: 34px 60px 37px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    padding: 35px 120px 37px;
+  }
 }

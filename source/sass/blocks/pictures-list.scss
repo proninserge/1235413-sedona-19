@@ -1,7 +1,5 @@
 .pictures-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  @include list-reset;
   line-height: 24px;
 }
 
@@ -9,5 +7,25 @@
   text-align: left;
   box-sizing: border-box;
   padding: 22px 20px 17px;
-  border-bottom: 2px solid $border-color;
+  border-bottom: 2px solid $border-whisper;
+}
+
+@media (min-width: $tablet-width) {
+  .pictures-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 60px;
+  }
+
+  .pictures-list__item {
+    padding: 0;
+    border: none;
+    line-height: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pictures-list {
+    padding: 16px 0 0;
+  }
 }
