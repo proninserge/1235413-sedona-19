@@ -7,7 +7,7 @@
   text-align: left;
   box-sizing: border-box;
   padding: 22px 20px 17px;
-  border-bottom: 2px solid $bdr-whisper;
+  border-bottom: 2px solid $border-whisper;
 }
 
 @media (min-width: $tablet-width) {
@@ -26,6 +26,6 @@
 
 @media (min-width: $desktop-width) {
   .pictures-list {
-    padding: 0;
+    padding: 16px 0 0;
   }
 }
