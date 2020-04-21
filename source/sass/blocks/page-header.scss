@@ -94,6 +94,7 @@
 
 .page-header__logo {
   position: absolute;
+  z-index: 10;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -114,5 +115,6 @@
     left: 50%;
     transform: translateX(-50%);
     width: auto;
+    z-index: 10;
   }
 }

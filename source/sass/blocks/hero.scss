@@ -1,4 +1,5 @@
 .hero {
+  position: relative;
   line-height: 0;
   box-sizing: border-box;
   background-color: $bg-greyblue;
@@ -15,6 +16,19 @@
     background-size: 780px;
     background-position: -230px -235px;
     padding: 53px 46px 68px;
+  }
+
+  &::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 27px;
+    width: 100%;
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
@@ -33,6 +47,12 @@
       background-position: 0 -228px;
       padding: 97px 0 118px;
     }
+
+    &::after {
+      height: 57px;
+      bottom: -1px;
+      background-image: url("../img/bg-intro-triangle-tablet.svg");
+    }
   }
 }
 
@@ -43,6 +63,10 @@
     &--interior {
       background-position: 0 -217px;
       padding: 105px 0 120px;
+    }
+
+    &::after {
+      background-image: url("../img/bg-intro-triangle-desktop.svg");
     }
   }
 }

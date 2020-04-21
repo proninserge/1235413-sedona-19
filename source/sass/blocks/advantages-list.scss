@@ -3,6 +3,7 @@
 }
 
 .advantages-list__item {
+  position: relative;
   background-color: $bg-darkerlightgrey;
   padding: 28px 37px 29px;
   box-sizing: border-box;
@@ -10,6 +11,18 @@
   &:first-child,
   &:nth-child(2) {
     padding: 0;
+  }
+
+  &:nth-child(3)::after,
+  &:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 280px;
+    background-color: #d6d6d6;
   }
 }
 
@@ -34,6 +47,7 @@
 }
 
 .advantages-list__detailed {
+  position: relative;
   background-color: $bg-seagull;
   color: $bg-white;
   padding: 57px 20px 300px;
@@ -44,10 +58,26 @@
     background-image: url("../img/main-city-mobile@1x.jpg");
   }
 
+  &--city::before {
+    content: "";
+    position: absolute;
+    top: -22px;
+    left: 0;
+    height: 39px;
+    width: 100%;
+    background-image: url("../img/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   &--devil {
     padding-top: 39px;
     background-image: url("../img/main-bridge-mobile@1x.jpg");
   }
+}
+
+.advantages-list__auxiliary {
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -69,6 +99,11 @@
     &:nth-child(3) {
       padding: 45px;
     }
+
+    &:nth-child(3)::after,
+    &:nth-child(4)::after {
+      display: none;
+    }
   }
 
   .advantages-list__header {
@@ -88,6 +123,10 @@
     &--city {
       background-image: url("../img/main-city-tablet@1x.jpg");
       background-position: center right;
+    }
+
+    &--city::before {
+      display: none;
     }
 
     &--devil {
@@ -128,5 +167,9 @@
   .advantages-list__detailed > .advantages-list__header {
     margin-left: 30px;
     margin-right: 30px;
+  }
+
+  .advantages-list__auxiliary {
+    display: inline;
   }
 }

@@ -45,6 +45,18 @@
       background-color: transparent;
       color: rgba(0, 0, 0, 0.3);
     }
+
+    &--active {
+      color: #766357;
+
+      &:hover {
+        color: #604e43;
+      }
+
+      &:active {
+        color: rgba(118, 99, 87, 0.3);
+      }
+    }
   }
 
   .site-list__item:last-child .site-list__link {

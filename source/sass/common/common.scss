@@ -17,7 +17,7 @@ a {
 }
 
 .page-wrapper {
-  min-width: 320px;
+  width: 320px;
   text-align: center;
   vertical-align: middle;
   position: relative;
@@ -36,6 +36,12 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   white-space: nowrap;
+}
+
+@media (min-width: $tablet-width) {
+  .page-wrapper {
+    width: 768px;
+  }
 }
 
 @media (min-width: $desktop-width) {
