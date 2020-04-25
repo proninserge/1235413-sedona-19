@@ -56,6 +56,11 @@
 
   &--city {
     background-image: url("../img/main-city-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/main-city-mobile@2x.jpg");
+      background-size: 320px auto;
+    }
   }
 
   &--city::before {
@@ -73,6 +78,11 @@
   &--devil {
     padding-top: 39px;
     background-image: url("../img/main-bridge-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/main-bridge-mobile@2x.jpg");
+      background-size: 320px auto;
+    }
   }
 }
 
@@ -123,6 +133,10 @@
     &--city {
       background-image: url("../img/main-city-tablet@1x.jpg");
       background-position: center right;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/main-city-tablet@2x.jpg");
+      }
     }
 
     &--city::before {
@@ -133,6 +147,10 @@
       padding: 44px 45px 44px 560px;
       background-image: url("../img/main-bridge-tablet@1x.jpg");
       background-position: center left;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/main-bridge-tablet@2x.jpg");
+      }
     }
   }
 }
@@ -155,12 +173,22 @@
     &--city {
       background-image: url("../img/main-city-desktop@1x.jpg");
       background-position: center right;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/main-city-desktop@2x.jpg");
+        background-size: 800px auto;
+      }
     }
 
     &--devil {
       padding: 52px 85px 58px 885px;
       background-image: url("../img/main-bridge-desktop@1x.jpg");
       background-position: center left;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/main-bridge-desktop@2x.jpg");
+        background-size: 800px auto;
+      }
     }
   }
 
