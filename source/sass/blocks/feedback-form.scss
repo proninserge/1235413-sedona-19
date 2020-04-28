@@ -16,7 +16,7 @@
   }
 
   &--contacts {
-    padding-bottom: 21px;
+    padding-bottom: 22px;
   }
 }
 
@@ -45,6 +45,16 @@
   &--contacts {
     margin-top: 60px;
   }
+
+  &--feelings {
+    margin-top: 62px;
+    margin-bottom: 20px;
+  }
+
+  &--visited {
+    margin-top: 79px;
+    margin-bottom: 17px;
+  }
 }
 
 .feedback-form__item {
@@ -53,6 +63,37 @@
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 21px;
+
+  &--feelings {
+    margin-bottom: 0;
+  }
+
+  &--visited {
+    margin-bottom: 13px;
+  }
+
+  &--contacts {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 58px;
+      height: 58px;
+      background-color: #e6e6e6;
+      background-image: url("../img/icon-phone.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:last-child {
+      &::after {
+        background-image: url("../img/icon-mail.svg");
+      }
+    }
+  }
 }
 
 .feedback-form__list--contacts > .feedback-form__item {
@@ -73,6 +114,76 @@
     margin: 0;
     margin-bottom: 8px;
     margin-left: 21px;
+  }
+
+  &--radio,
+  &--checkbox {
+    position: relative;
+    padding: 21px 0 21px 79px;
+    box-sizing: border-box;
+
+    &::before {
+      content: "";
+      position: absolute;
+      box-sizing: border-box;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      height: 55px;
+      width: 55px;
+      background-color: $bg-lightgrey;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      display: none;
+      position: absolute;
+      box-sizing: border-box;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 17px;
+      height: 22px;
+      width: 22px;
+      background-color: #333333;
+      border-radius: 50%;
+    }
+  }
+
+  &--checkbox {
+    &::before {
+      border-radius: 3px;
+    }
+
+    &::after {
+      content: "";
+      height: 16px;
+      width: 23px;
+      background-color: transparent;
+      background-image: url("../img/icon-tick.svg");
+      background-position: center;
+    }
+  }
+}
+
+.feedback-form__radio:hover + .feedback-form__label--radio::before,
+.feedback-form__checkbox:hover + .feedback-form__label--checkbox::before {
+  background-color: $border-whisper;
+}
+
+.feedback-form__radio:checked + .feedback-form__label--radio::after,
+.feedback-form__checkbox:checked + .feedback-form__label--checkbox::after {
+  display: block;
+}
+
+.feedback-form__radio:disabled + .feedback-form__label--radio,
+.feedback-form__checkbox:disabled + .feedback-form__label--checkbox {
+  &::before {
+    background-color: #d5d5d5;
+  }
+
+  &::after {
+    opacity: 0.3;
   }
 }
 
@@ -234,13 +345,52 @@
     &--visited {
       display: flex;
       flex-wrap: wrap;
-      padding: 0 155px;
-      margin-top: 94px;
+      padding: 0 70px 0 95px;
+      margin-top: 121px;
+      margin-bottom: 15px;
+    }
+
+    &--feelings {
+      margin-top: 80px;
+      margin-bottom: 0;
     }
   }
 
-  .feedback-form__label--connection {
-    width: 100%;
+  .feedback-form__item {
+    &--feelings {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &--visited {
+      margin-bottom: 20px;
+    }
+
+    &--visited:first-child {
+      margin-right: 70px;
+    }
+
+    &--visited:nth-child(3) {
+      margin-right: 90px;
+      margin-bottom: 0;
+    }
+
+    &--visited:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .feedback-form__label {
+    &--connection {
+      width: 100%;
+    }
+
+    &--radio {
+      padding-left: 75px;
+    }
   }
 
   .feedback-form__list--contacts > .feedback-form__item {
@@ -288,6 +438,17 @@
       justify-content: space-between;
       margin-top: 145px;
     }
+
+    &--feelings {
+      padding-left: 4px;
+    }
+
+    &--visited {
+      padding: 0;
+      margin-top: 122px;
+      margin-bottom: 13px;
+      justify-content: space-between;
+    }
   }
 
   .feedback-form__list--contacts .feedback-form__item {
@@ -319,6 +480,15 @@
     &::before,
     &::after {
       width: 280px;
+    }
+  }
+
+  .feedback-form__item--visited {
+    margin: 0;
+
+    &:first-child,
+    &:nth-child(3) {
+      margin: 0;
     }
   }
 }

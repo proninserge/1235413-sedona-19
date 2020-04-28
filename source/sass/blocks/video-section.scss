@@ -1,6 +1,6 @@
 .video-section {
   box-sizing: border-box;
-  padding: 30px 0 37px;
+  padding: 32px 0 37px;
 }
 
 .video-section__header,
@@ -24,7 +24,7 @@
 
 @media (min-width: $tablet-width) {
   .video-section {
-    padding: 65px 60px 41px;
+    padding: 65px 60px 48px;
   }
 
   .video-section__header {
@@ -39,7 +39,7 @@
 
 @media (min-width: $desktop-width) {
   .video-section {
-    padding: 70px 200px 85px;
+    padding: 70px 200px 91px;
   }
 
   .video-section__description {

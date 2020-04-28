@@ -19,37 +19,18 @@
 
   &:active {
     background-color: $bg-active-shakespeare;
+
+    & .social-list__icons {
+      fill-opacity: 0.3;
+    }
   }
 
-  &::before {
-    content: "";
-    display: block;
+  .social-list__icons {
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  &--twitter::before {
-    background-image: url("../img/icon-twitter.svg");
-  }
-
-  &--facebook::before {
-    background-image: url("../img/icon-facebook.svg");
-  }
-
-  &--youtube::before {
-    background-image: url("../img/icon-youtube.svg");
-  }
-
-  &--twitter:active::before,
-  &--facebook:active::before,
-  &--youtube:active::before {
-    opacity: 0.3;
+    fill: $bg-white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
