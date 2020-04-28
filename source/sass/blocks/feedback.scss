@@ -1,5 +1,10 @@
+.feedback {
+  margin-bottom: 37px;
+}
+
 @media (min-width: $tablet-width) {
   .feedback {
+    margin-bottom: 0;
     box-sizing: border-box;
     padding-left: 60px;
     padding-right: 60px;

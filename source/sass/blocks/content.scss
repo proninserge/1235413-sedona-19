@@ -11,7 +11,7 @@
 
 .content__author {
   margin-top: 1px;
-  margin-bottom: 2px;
+  margin-bottom: 8px;
   font-weight: 400;
   text-transform: none;
 }
@@ -19,7 +19,7 @@
 .content__likes {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
 }
 
 .content__like-btn {
@@ -28,10 +28,12 @@
   padding: 0;
   border: 0;
   background-color: transparent;
-  background-image: url("../img/icon-like.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   margin-right: 15px;
+}
+
+.content__like {
+  fill: $bg-black;
+  fill-opacity: 0.3;
 }
 
 @media (min-width: $tablet-width) {
@@ -46,7 +48,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: $bg-lightgrey;
-    padding: 7px 30px 15px 20px;
+    padding: 7px 30px 9px 20px;
 
     &--main-photo {
       padding-right: 20px;
@@ -82,5 +84,10 @@
     width: 100%;
     bottom: 0;
     right: 0;
+  }
+
+  .content__like {
+    fill: $bg-white;
+    fill-opacity: 1;
   }
 }

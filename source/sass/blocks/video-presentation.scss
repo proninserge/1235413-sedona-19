@@ -30,7 +30,8 @@
 .video-presentation__btn {
   font-size: 0;
   border: 0;
-  background-color: #000000;
+  padding: 0;
+  background-color: transparent;
   height: 20px;
   width: 20px;
   box-sizing: border-box;
@@ -43,6 +44,19 @@
   &--fullscreen {
     margin-left: 31px;
   }
+
+  &:hover > .video-presentation__icon {
+    fill: #333333;
+  }
+
+  &:active > .video-presentation__icon {
+    fill: #333333;
+    fill-opacity: 0.3;
+  }
+}
+
+.video-presentation__icon {
+  fill: #5c6870;
 }
 
 @media (min-width: $tablet-width) {
@@ -73,6 +87,22 @@
     height: 100%;
     padding-left: 12px;
     padding-right: 21px;
+  }
+
+  .video-presentation__icon {
+    fill: $bg-white;
+  }
+
+  .video-presentation__btn {
+    &:hover > .video-presentation__icon {
+      fill: $bg-white;
+      fill-opacity: 0.6;
+    }
+
+    &:active > .video-presentation__icon {
+      fill: $bg-white;
+      fill-opacity: 0.3;
+    }
   }
 }
 
