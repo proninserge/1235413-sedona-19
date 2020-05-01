@@ -6,6 +6,7 @@
 
 .more-advantages__item {
   position: relative;
+  box-sizing: border-box;
   padding-top: 30px;
   padding-left: 71px;
   padding-right: 25px;
@@ -22,7 +23,7 @@
 .more-advantages__icons {
   position: absolute;
   fill: $bg-seagull;
-  height: auto;
+  height: 37px;
   width: 32px;
   left: 25px;
   top: 19px;
@@ -37,6 +38,7 @@
     left: 19px;
     top: 24px;
     width: 38px;
+    height: 35px;
   }
 }
 
@@ -49,7 +51,7 @@
     text-align: center;
     vertical-align: middle;
     padding: 159px 45px 61px;
-    width: 33%;
+    width: 256px;
 
     &--cuisine {
       order: 2;
@@ -57,27 +59,28 @@
 
     &--souvenirs {
       order: 3;
-      background-position: center 55px;
     }
   }
 
   .more-advantages__icons {
     position: absolute;
     fill: $bg-seagull;
-    height: auto;
-    width: 65px;
+    height: 75px;
+    width: 64px;
     left: 50%;
     transform: translateX(-50%);
     top: 57px;
 
     &--lodgement {
       top: 63px;
-      width: 72px;
+      width: 75px;
+      height: 72px;
     }
 
     &--cuisine {
       top: 63px;
-      width: 75px;
+      width: 77px;
+      height: 68px;
     }
   }
 }
@@ -85,10 +88,10 @@
 @media (min-width: $desktop-width) {
   .more-advantages__item {
     padding: 158px 50px 82px;
+    width: 400px;
   }
 
   .more-advantages__icons--lodgement {
-    width: 73px;
     top: 61px;
   }
 
