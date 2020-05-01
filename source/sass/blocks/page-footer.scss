@@ -22,12 +22,13 @@
   .page-footer {
     flex-direction: row;
     align-items: center;
-    padding: 34px 60px 37px;
+    padding: 40px 60px 40px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-footer {
-    padding: 35px 120px 37px;
+    padding-left: 120px;
+    padding-right: 120px;
   }
 }

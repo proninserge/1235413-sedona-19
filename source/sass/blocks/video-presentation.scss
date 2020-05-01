@@ -16,6 +16,31 @@
   height: 45px;
   width: 280px;
   background-color: rgba(0, 0, 0, 0.6);
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 235px;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.video-presentation__seek-slider {
+  box-sizing: border-box;
+  position: absolute;
+  left: 58px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  width: 9px;
+  height: 9px;
+  background-color: $bg-white;
 }
 
 .video-presentation__btns {
@@ -76,9 +101,17 @@
     left: 93px;
     top: 50%;
     transform: translateY(-50%);
-    height: 20px;
+    height: 3px;
     width: 60.5%;
-    background-color: rgba(255, 255, 255, 0.2); /*предварительная стилизация*/
+    background-color: rgba(255, 255, 255, 0.2);
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .video-presentation__seek-slider {
+    left: 112px;
   }
 
   .video-presentation__btns {
