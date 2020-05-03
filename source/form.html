@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="/fonts/ptsans.woff2" as="font">
     <title>Седона, забронировать отель, отдых, незабываемые ощущения</title>
   </head>
   <body>
@@ -14,7 +15,7 @@
 
   <div class="page-wrapper">
     <header class="page-header">
-      <button class="page-header__toggle page-header__toggle--close" type="button" aria-label="Открыть меню"></button>
+      <button class="page-header__toggle page-header__toggle--no-js" type="button" aria-label="Открыть меню"></button>
       <nav class="page-nav page-nav--closed page-nav--no-js">
         <ul class="page-nav__list site-list">
           <li class="site-list__item">
@@ -62,13 +63,13 @@
                 <label class="feedback-form__label feedback-form__label--contacts" for="firstname">
                   Имя<sup>*</sup>:
                 </label>
-                <input class="feedback-form__type-input" type="text" id="firstname" name="first-name" placeholder="Петр" required>
+                <input class="feedback-form__type-input" type="text" id="firstname" name="first-name" placeholder="Петр">
               </li>
               <li class="feedback-form__item">
                 <label class="feedback-form__label feedback-form__label--contacts" for="lastname">
                   Фамилия<sup>*</sup>:
                 </label>
-                <input class="feedback-form__type-input" type="text" id="lastname" name="last-name" placeholder="Иванов" required>
+                <input class="feedback-form__type-input" type="text" id="lastname" name="last-name" placeholder="Иванов">
               </li>
               <li class="feedback-form__item">
                 <label class="feedback-form__label feedback-form__label--contacts" for="middlename">
@@ -85,13 +86,13 @@
                 <label class="feedback-form__label feedback-form__label--contacts feedback-form__label--connection" for="tel">
                   <span class="feedback-form__auxiliary">Контактный</span> телефон<sup>*</sup>:
                 </label>
-                <input class="feedback-form__type-input" type="tel" id="tel" name="phone" placeholder="Введите телефон" required>
+                <input class="feedback-form__type-input" type="tel" id="tel" name="phone" placeholder="Введите телефон">
               </li>
               <li class="feedback-form__item feedback-form__item--contacts">
                 <label class="feedback-form__label feedback-form__label--contacts feedback-form__label--connection" for="email">
                   Электронная почта<sup>*</sup>:
                 </label>
-                <input class="feedback-form__type-input" type="email" id="email" name="e-mail" placeholder="Введите e-mail" required>
+                <input class="feedback-form__type-input" type="email" id="email" name="e-mail" placeholder="Введите e-mail">
               </li>
             </ul>
           </fieldset>
@@ -160,7 +161,7 @@
         <p class="popup__description">
           Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить.
         </p>
-        <button class="popup__btn" type="button">ОК</button>
+        <button class="popup__btn popup__btn--failure" type="button">ОК</button>
       </section>
       <section class="popup popup--success">
         <h2 class="popup__header">Ваш отзыв отправлен!</h2>
@@ -208,6 +209,8 @@
     </footer>
   </div>
 
+  <script src="js/script.min.js"></script>
+  <script src="js/submit.min.js"></script>
   <script src="js/picturefill.min.js"></script>
   <script src="js/svg4everybody.min.js"></script>
   </body>

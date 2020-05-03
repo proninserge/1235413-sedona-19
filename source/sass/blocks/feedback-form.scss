@@ -219,6 +219,10 @@
     border: 4px solid $border-whisper;
     padding-left: 18px;
   }
+
+  &--error {
+    outline: 3px solid #f47979;
+  }
 }
 
 .feedback-form__btn {

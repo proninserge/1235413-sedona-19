@@ -69,11 +69,13 @@
   &--close:hover::before,
   &--close:hover::after {
     background-color: $hover-btn-white;
+    box-shadow: none;
   }
 
   &--close:active::before,
   &--close:active::after {
     background-color: $active-btn-white;
+    box-shadow: none;
   }
 
   &--close::before {
@@ -82,6 +84,10 @@
 
   &--close::after {
     transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &--no-js {
+    display: none;
   }
 }
 
