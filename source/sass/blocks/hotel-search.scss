@@ -15,13 +15,11 @@
 
 .hotel-search__btn {
   @include catch-font;
-  font-family: inherit;
-  text-transform: inherit;
   color: $bg-white;
-  border: 0;
   background-color: $bg-seagull;
   padding: 16px;
   box-sizing: border-box;
+  display: block;
   width: 100%;
 
   &:hover {
