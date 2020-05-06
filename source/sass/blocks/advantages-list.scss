@@ -153,6 +153,10 @@
       }
     }
   }
+
+  .advantages-list__auxiliary {
+    display: inline;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -195,9 +199,5 @@
   .advantages-list__detailed > .advantages-list__header {
     margin-left: 30px;
     margin-right: 30px;
-  }
-
-  .advantages-list__auxiliary {
-    display: inline;
   }
 }

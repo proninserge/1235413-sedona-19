@@ -1,3 +1,4 @@
+var form = document.querySelector(".feedback-form");
 var elements = document.querySelectorAll(".feedback-form__type-input--hold");
 var sendForm = document.querySelector(".feedback-form__btn");
 var popupFailed = document.querySelector(".popup--failed");
@@ -5,7 +6,7 @@ var popupDone = document.querySelector(".popup--success");
 var popup = document.querySelectorAll(".popup");
 var buttons = document.querySelectorAll(".popup__btn");
 
-sendForm.addEventListener("click", function (event) {
+form.addEventListener("submit", function (event) {
   event.preventDefault();
   var count = 0;
   for (var i = 0; i <= elements.length - 1; i++) {
