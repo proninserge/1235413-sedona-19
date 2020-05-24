@@ -97,7 +97,7 @@
   }
 
   .advantages-list__item {
-    width: 33.3%;
+    width: 256px;
     padding: 45px 50px;
 
     &:first-child,
@@ -161,6 +161,7 @@
 
 @media (min-width: $desktop-width) {
   .advantages-list__item {
+    width: 400px;
     padding-top: 44px;
     padding-bottom: 65px;
   }
